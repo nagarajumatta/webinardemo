@@ -1,2 +1,6 @@
 # Run the script every 5 minutes
 */5 * * * * root python /usr/src/app/fetch_data.py >> /var/log/cron.log 2>&1
+
+*/4 * * * * root python /usr/src/app/fetch_data1.py >> /var/log/cron.log 2>&1
+
+
