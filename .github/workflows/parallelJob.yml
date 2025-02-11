@@ -1,0 +1,15 @@
+name: Parallel Jobs with Matrix
+on: [push]
+
+jobs:
+  parallel-job:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        instance: [1, 2, 3]  # Runs three parallel jobs
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run task in parallel
+        run: echo "Running instance ${{ matrix.instance }}"
